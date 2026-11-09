@@ -5,149 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Firma Gmail – Eduardo Salgado Licea</title>
 </head>
-<body style="margin:0; padding:32px; background-color:#F8FAFC; font-family:Arial, Helvetica, sans-serif;">
+<body style="margin:0; padding:24px; background-color:#F8FAFC; font-family:Arial, Helvetica, sans-serif;">
 
-<!-- ===================== PANEL DE AYUDA (NO forma parte de la firma) ===================== -->
-<div style="max-width:620px; margin:0 auto 24px auto; padding:16px 20px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:10px; font-size:13px; color:#334155; line-height:1.5; box-shadow:0 1px 3px rgba(0,0,0,0.05);">
-  <strong style="color:#0B3D91;">Instalación en Gmail:</strong>
-  1) Pulsa <strong style="color:#1A56DB;">Copiar firma</strong>. 2) Gmail → ⚙️ → <em>Ver todos los ajustes</em> → <em>General</em> → <em>Firma</em>.
-  3) Pega con <strong>Ctrl+V</strong> y guarda los cambios.
-  <br>
-  <button type="button" onclick="copiarFirma()" style="margin-top:12px; padding:9px 18px; background:#1A56DB; color:#FFFFFF; border:0; border-radius:6px; font-size:13px; font-weight:bold; cursor:pointer;">Copiar firma</button>
-  <span id="estado" style="margin-left:12px; color:#059669; font-weight:bold;"></span>
+<!-- ===================== PANEL DE INSTRUCCIONES ===================== -->
+<div style="max-width:620px; margin:0 auto 24px auto; padding:18px 22px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; font-size:13px; color:#334155; line-height:1.5; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+  <strong style="color:#0B3D91; font-size:14px;">Cómo instalar en Gmail sin que se rompa:</strong><br>
+  1) Elige el diseño que más te guste abajo y haz clic en <strong>«Copiar esta firma»</strong>.<br>
+  2) Ve a <strong>Gmail</strong> &rarr; ⚙️ <em>Configuración</em> &rarr; <em>Ver todos los ajustes</em> &rarr; pestaña <em>General</em> &rarr; <em>Firma</em>.<br>
+  3) Pega con <strong>Ctrl + V</strong> y haz clic en <strong>Guardar cambios</strong> al final.
 </div>
 
-<!-- ============================== INICIO DE LA FIRMA ============================== -->
-<div id="firma" style="max-width:620px; margin:0 auto; background:#FFFFFF; padding:24px; border-radius:12px; border:1px solid #E2E8F0;">
-<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; font-family:Arial, Helvetica, sans-serif; color:#334155; width:100%; max-width:580px;">
-  <tr>
-    <!-- Columna Izquierda: Logo Oficial Nubosoft + Badge Animado de Partners -->
-    <td valign="top" width="165" style="width:165px; padding:0 20px 0 0; vertical-align:top; text-align:center;">
-      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; width:100%;">
-        <!-- Logotipo Oficial Nubosoft en Alta Definición -->
-        <tr>
-          <td align="center" style="padding:0 0 16px 0; text-align:center;">
+<!-- =================================================================== -->
+<!-- OPCIÓN 1: LOGOS A UN LADO (Columna Lateral Fija que NO se rompe)   -->
+<!-- =================================================================== -->
+<div style="max-width:620px; margin:0 auto 30px auto; background:#FFFFFF; padding:20px; border-radius:12px; border:1px solid #E2E8F0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+    <strong style="color:#1E293B; font-size:14px;">Opción 1: Logos a un lado (Columna lateral compacta)</strong>
+    <button type="button" onclick="copiarNodo('firma-opcion1', 'estado1')" style="padding:7px 16px; background:#1A56DB; color:#FFFFFF; border:0; border-radius:6px; font-size:12px; font-weight:bold; cursor:pointer;">Copiar esta firma</button>
+  </div>
+  <div id="estado1" style="font-size:12px; color:#059669; font-weight:bold; margin-bottom:10px;"></div>
+
+  <!-- INICIO FIRMA OPCIÓN 1 -->
+  <div id="firma-opcion1">
+    <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="480" style="width:480px; min-width:480px; border-collapse:collapse; font-family:Arial, Helvetica, sans-serif; color:#334155;">
+      <tr>
+        <!-- Columna Lateral Izquierda (Logos a un lado) -->
+        <td width="125" valign="top" style="width:125px; min-width:125px; max-width:125px; vertical-align:top; border-right:2px solid #1A56DB; padding:0 14px 0 0; text-align:center;">
+          <!-- Logo Oficial Nubosoft HD -->
+          <div style="margin-bottom:12px; text-align:center;">
             <a href="https://nubosoft.com" target="_blank" style="text-decoration:none; display:inline-block;">
-              <img src="https://cdn.jsdelivr.net/gh/EddSL2/Firma@main/badge/nubosoft_hd.png" width="140" alt="Nubosoft" style="display:block; width:140px; height:auto; border:0; margin:0 auto;" />
+              <img src="https://cdn.jsdelivr.net/gh/EddSL2/Firma@main/badge/nubosoft_hd.png" width="115" alt="Nubosoft" style="display:block; width:115px; height:auto; border:0; margin:0 auto;" />
             </a>
-          </td>
-        </tr>
-
-        <!-- Badge Animado de Partners Multicloud (Google Cloud MSP & AWS) en bucle -->
-        <tr>
-          <td align="center" style="padding:0; text-align:center;">
+          </div>
+          <!-- Badge Animado Partners Multicloud (Fade suave, nunca se corta) -->
+          <div style="text-align:center;">
             <a href="https://nubosoft.com" target="_blank" style="text-decoration:none; display:inline-block;">
-              <img src="https://cdn.jsdelivr.net/gh/EddSL2/Firma@main/badge/partners-badge-compact.gif" width="150" height="85" alt="Google Cloud & AWS Partner" style="display:block; width:150px; height:85px; border:1px solid #E2E8F0; border-radius:8px; margin:0 auto; outline:none;" />
+              <img src="https://cdn.jsdelivr.net/gh/EddSL2/Firma@main/badge/partners-badge-compact.gif" width="115" height="66" alt="Google Cloud & AWS Partner" style="display:block; width:115px; height:66px; border:1px solid #E2E8F0; border-radius:6px; margin:0 auto; outline:none;" />
             </a>
-          </td>
-        </tr>
-      </table>
-    </td>
+          </div>
+        </td>
 
-    <!-- Barra Vertical Divisoria en Degradado Corporativo -->
-    <td width="2" bgcolor="#1A56DB" style="width:2px; background-color:#1A56DB; background-image:linear-gradient(180deg,#0B3D91 0%,#1A56DB 50%,#06B6D4 100%); font-size:0; line-height:0;">&nbsp;</td>
-
-    <!-- Columna Derecha: Información Profesional y Contacto -->
-    <td valign="top" style="padding:0 0 0 20px; vertical-align:top;">
-      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; width:100%;">
-        <!-- Nombre Completo -->
-        <tr>
-          <td style="font-family:Arial, Helvetica, sans-serif; font-size:21px; line-height:25px; font-weight:bold; color:#0B3D91; padding:0;">
-            Eduardo Salgado Licea
-          </td>
-        </tr>
-
-        <!-- Cargo y Especialidad -->
-        <tr>
-          <td style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; font-weight:bold; color:#1E293B; padding:4px 0 0 0;">
-            Sales Engineer <span style="color:#06B6D4;">&amp;</span> Multi-Cloud Architect
-          </td>
-        </tr>
-
-        <!-- Empresa y Tagline -->
-        <tr>
-          <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; color:#64748B; padding:2px 0 10px 0;">
-            <a href="https://nubosoft.com" target="_blank" style="color:#1A56DB; text-decoration:none; font-weight:bold;">Nubosoft</a>
-            <span style="color:#94A3B8;">&nbsp;|&nbsp; Multi-Cloud Partner</span>
-          </td>
-        </tr>
-
-        <!-- Línea Separadora Sutil -->
-        <tr>
-          <td height="1" bgcolor="#E2E8F0" style="height:1px; background-color:#E2E8F0; font-size:0; line-height:0;">&nbsp;</td>
-        </tr>
-
-        <!-- Datos de Contacto Directo -->
-        <tr>
-          <td style="padding:10px 0 0 0;">
-            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
-              <!-- Teléfonos -->
-              <tr>
-                <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#06B6D4; padding:0 8px 0 0; width:14px;">T</td>
-                <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; color:#334155;">
-                  <a href="tel:+525640100584" style="color:#334155; text-decoration:none; font-weight:500;">+52 56 4010 0584</a>
-                  <span style="color:#CBD5E1;">&nbsp;|&nbsp;</span>
-                  <a href="tel:+52554170XXXX" style="color:#334155; text-decoration:none; font-weight:500;">+52 55 4170 XXXX</a>
-                </td>
-              </tr>
-              <!-- Web -->
-              <tr>
-                <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#06B6D4; padding:3px 8px 0 0; width:14px;">W</td>
-                <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; padding:3px 0 0 0;">
-                  <a href="https://nubosoft.com" target="_blank" style="color:#1A56DB; text-decoration:none; font-weight:500;">nubosoft.com</a>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Badges de Presencia Territorial -->
-        <tr>
-          <td style="padding:10px 0 0 0;">
-            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
-              <tr>
-                <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:9px; font-weight:bold; letter-spacing:1px; color:#64748B; padding:0 8px 0 0;">PRESENCIA</td>
-                <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:10px; padding:2px 8px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1E293B; white-space:nowrap;">🇲🇽 México</td>
-                <td width="5" style="width:5px; font-size:0;">&nbsp;</td>
-                <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:10px; padding:2px 8px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1E293B; white-space:nowrap;">🇨🇴 Colombia</td>
-                <td width="5" style="width:5px; font-size:0;">&nbsp;</td>
-                <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:10px; padding:2px 8px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#1E293B; white-space:nowrap;">🇪🇸 España</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-        <!-- Botones de Acción (LinkedIn & Web) -->
-        <tr>
-          <td style="padding:12px 0 0 0;">
-            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
-              <tr>
-                <td bgcolor="#0A66C2" style="background-color:#0A66C2; border-radius:4px;">
-                  <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" style="display:inline-block; padding:5px 12px; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#FFFFFF; text-decoration:none;">
-                    <span style="background-color:#FFFFFF; color:#0A66C2; padding:0 3px; border-radius:2px;">in</span>&nbsp; LinkedIn
-                  </a>
-                </td>
-                <td width="8" style="width:8px; font-size:0;">&nbsp;</td>
-                <td bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #1A56DB; border-radius:4px;">
-                  <a href="https://nubosoft.com" target="_blank" style="display:inline-block; padding:4px 12px; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#1A56DB; text-decoration:none;">
-                    Visitar nubosoft.com &rarr;
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-
-      </table>
-    </td>
-  </tr>
-</table>
+        <!-- Columna Derecha (Datos de Contacto) -->
+        <td width="335" valign="top" style="width:335px; min-width:335px; vertical-align:top; padding:0 0 0 16px;">
+          <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse; width:100%;">
+            <!-- Nombre -->
+            <tr>
+              <td style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; font-weight:bold; color:#0B3D91; padding:0;">
+                Eduardo Salgado Licea
+              </td>
+            </tr>
+            <!-- Cargo -->
+            <tr>
+              <td style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; font-weight:bold; color:#1E293B; padding:3px 0 0 0;">
+                Sales Engineer <span style="color:#06B6D4;">&amp;</span> Multi-Cloud Architect
+              </td>
+            </tr>
+            <!-- Empresa -->
+            <tr>
+              <td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:15px; color:#64748B; padding:2px 0 6px 0;">
+                <a href="https://nubosoft.com" target="_blank" style="color:#1A56DB; text-decoration:none; font-weight:bold;">Nubosoft</a>
+                <span style="color:#94A3B8;">&nbsp;|&nbsp; Multi-Cloud Partner</span>
+              </td>
+            </tr>
+            <!-- Línea Separadora -->
+            <tr>
+              <td height="1" bgcolor="#E2E8F0" style="height:1px; background-color:#E2E8F0; font-size:0; line-height:0; padding:0;">&nbsp;</td>
+            </tr>
+            <!-- Contacto -->
+            <tr>
+              <td style="padding:6px 0 0 0;">
+                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
+                  <tr>
+                    <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#06B6D4; padding:0 6px 0 0;">T</td>
+                    <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:16px; color:#334155;">
+                      <a href="tel:+525640100584" style="color:#334155; text-decoration:none;">+52 56 4010 0584</a>
+                      <span style="color:#CBD5E1;">&nbsp;|&nbsp;</span>
+                      <a href="tel:+52554170XXXX" style="color:#334155; text-decoration:none;">+52 55 4170 XXXX</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#06B6D4; padding:2px 6px 0 0;">W</td>
+                    <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:16px; padding:2px 0 0 0;">
+                      <a href="https://nubosoft.com" target="_blank" style="color:#1A56DB; text-decoration:none;">nubosoft.com</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Presencia -->
+            <tr>
+              <td style="padding:6px 0 0 0;">
+                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
+                  <tr>
+                    <td valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:9px; font-weight:bold; letter-spacing:0.5px; color:#64748B; padding:0 6px 0 0;">PRESENCIA</td>
+                    <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:8px; padding:2px 6px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#1E293B; white-space:nowrap;">🇲🇽 México</td>
+                    <td width="4" style="width:4px; font-size:0;">&nbsp;</td>
+                    <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:8px; padding:2px 6px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#1E293B; white-space:nowrap;">🇨🇴 Colombia</td>
+                    <td width="4" style="width:4px; font-size:0;">&nbsp;</td>
+                    <td valign="middle" bgcolor="#F1F5F9" style="background-color:#F1F5F9; border:1px solid #E2E8F0; border-radius:8px; padding:2px 6px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#1E293B; white-space:nowrap;">🇪🇸 España</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Botones -->
+            <tr>
+              <td style="padding:8px 0 0 0;">
+                <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
+                  <tr>
+                    <td bgcolor="#0A66C2" style="background-color:#0A66C2; border-radius:4px;">
+                      <a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" style="display:inline-block; padding:4px 10px; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#FFFFFF; text-decoration:none;">
+                        <span style="background-color:#FFFFFF; color:#0A66C2; padding:0 2px; border-radius:2px;">in</span>&nbsp; LinkedIn
+                      </a>
+                    </td>
+                    <td width="6" style="width:6px; font-size:0;">&nbsp;</td>
+                    <td bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #1A56DB; border-radius:4px;">
+                      <a href="https://nubosoft.com" target="_blank" style="display:inline-block; padding:3px 10px; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; color:#1A56DB; text-decoration:none;">
+                        Visitar nubosoft.com &rarr;
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- FIN FIRMA OPCIÓN 1 -->
 </div>
-<!-- =============================== FIN DE LA FIRMA =============================== -->
 
 <script>
-  function copiarFirma() {
-    var nodo = document.getElementById('firma');
+  function copiarNodo(idNodo, idEstado) {
+    var nodo = document.getElementById(idNodo);
     var rango = document.createRange();
     rango.selectNodeContents(nodo);
     var sel = window.getSelection();
@@ -155,7 +145,7 @@
     sel.addRange(rango);
     var ok = document.execCommand('copy');
     sel.removeAllRanges();
-    document.getElementById('estado').textContent = ok ? '✓ Copiada con éxito. Pégala en Gmail.' : 'Selecciona y copia con Ctrl+C.';
+    document.getElementById(idEstado).textContent = ok ? '✓ Copiada con éxito. Ahora pégala en los ajustes de Gmail.' : 'Selecciona y copia con Ctrl+C.';
   }
 </script>
 </body>
